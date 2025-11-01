@@ -3,9 +3,9 @@
   --font-main: "JetBrains Mono", monospace;
 
   /* Light theme */
-  --bg: #f7f8fb;
-  --fg: #0f172a;
-  --muted: #6b7280;
+  --bg: #c1c8d0;
+  --fg: #242832;
+  --muted: #2d2f34;
   --bg-card: #e9ecf1;        /* slightly darker than bg */
   --border: rgba(15, 23, 42, 0.06);
   --text: #111;
@@ -14,9 +14,9 @@
 
 /* Dark tokens */
 body.dark, body.theme-dark, .dark {
-  --bg: #0b1220;
-  --fg: #e6eef8;
-  --muted: #9aa3b7;
+  --bg: #242832;
+  --fg: #c1c8d0;
+  --muted: #2d2f34;
   --bg-card: #37404d;        /* slightly darker than bg */
   --border: rgba(255,255,255,0.06);
   --shadow: 0 0 0 rgba(0,0,0,0);
@@ -24,7 +24,7 @@ body.dark, body.theme-dark, .dark {
 
 /* Blue Theme */
 body.theme-blue {
-  --bg-card: #d4e4ff;
+  --bg-card: #749bdf;
   --text: #0c1a2b;
   --accent: #2a5fba;
   --accent-dark: #3b82f6;
@@ -32,9 +32,9 @@ body.theme-blue {
 
 /* Cyberpunk Theme */
 body.theme-neon {
-  --bg-card: #c970ef;
+  --bg-card: #d788f9;
   --text: #353d46;
-  --accent: #8a2eff;
+  --accent: #a162f4;
   --accent-dark: #fd8cff;
 }
 
