@@ -4,24 +4,25 @@
 .menu-dropdown { display: none; position: absolute; right: 0; top: 44px; min-width: 180px; }
 .card.small { padding: 8px; }
 
-.hero { padding: 40px 0; background: var(--bg-card); 
-    border: 1px solid rgba(255, 255, 255, 0.12); 
-    transition: background 0.3s ease, transform 0.3s ease;
+.hero { padding: 40px 0; }
+.hero-card { display: flex; justify-content: space-between; gap: 18px; align-items: center; border-radius: 14px; padding: 20px; 
+ background: var(--bg-card); 
+ border: 1px solid rgba(255, 255, 255, 0.12); 
+ transition: background 0.3s ease, transform 0.3s ease;
 }
-.hero-card { display: flex; justify-content: space-between; gap: 18px; align-items: center; border-radius: 14px; padding: 20px; }
 .hero-title { font-size: 32px; margin: 0; }
 .hero-sub { font-size: 14px; color: var(--muted); }
 
 .hero-right { min-width: 140px; text-align: center; padding: 16px; border-radius: 12px; }
 .glass-card { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border-radius: 12px; padding: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); color: white; background: var(--accent); }
 
-.section-card {
+.card {
   background: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.section-card:hover {
+.card:hover {
   background: var(--accent-dark);
   transform: translateY(-3px);
 }
