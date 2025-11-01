@@ -1,0 +1,53 @@
+/* base.css — variables, reset, fonts */
+:root {
+  --font-main: "JetBrains Mono", monospace;
+
+  /* Light theme */
+  --bg: #f7f8fb;
+  --fg: #0f172a;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: rgba(15, 23, 42, 0.06);
+  --accent: #0066ff;
+  --accent-2: #3b82f6;
+  --accent-3: #60a5fa;
+  --shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Dark tokens */
+body.dark, body.theme-dark, .dark {
+  --bg: #0b1220;
+  --fg: #e6eef8;
+  --muted: #9aa3b7;
+  --card: #0f1726;
+  --border: rgba(255,255,255,0.06);
+  --shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* Accent themes (class-based) */
+body.theme-blue { --accent: #0066ff; --accent-2: #3b82f6; --accent-3: #60a5fa; }
+body.theme-cyber { --accent: #00eaff; --accent-2: #ff00f5; --accent-3: #8a2eff; }
+body.theme-gray { --accent: #6b7280; --accent-2: #9ca3af; --accent-3: #d1d5db; }
+
+/* Base reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px;
+}
+
+/* layout */
+.container { max-width: 1000px; margin: 0 auto; position: relative; }
+
+/* small components */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.section { margin: 18px 0; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.footer { text-align: center; margin: 40px 0; color: var(--muted); }

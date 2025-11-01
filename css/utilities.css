@@ -1,0 +1,39 @@
+/* utilities.css — light utility set */
+.flex { display: flex; }
+.grid { display: grid; }
+.flex-center { display:flex; align-items:center; justify-content:center; }
+.container { padding: 0 18px; }
+
+.p-1 { padding: 8px; }
+.p-2 { padding: 12px; }
+.p-4 { padding: 16px; }
+
+.m-1 { margin: 8px; }
+.m-2 { margin: 12px; }
+.m-4 { margin: 16px; }
+
+.gap-1 { gap: 8px; }
+.gap-2 { gap: 12px; }
+.gap-4 { gap: 16px; }
+
+.text-sm { font-size: 14px; }
+.text-md { font-size: 16px; }
+.text-lg { font-size: 20px; }
+
+.rounded { border-radius: 8px; }
+.rounded-lg { border-radius: 12px; }
+
+.shadow { box-shadow: var(--shadow); }
+
+.w-full { width: 100%; }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.text-accent { color: var(--accent); }
+.bg-accent { background: var(--accent); color: white; }
+
+.glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.5); }
+body.dark .glass { background: rgba(20,20,35,0.55); border-color: rgba(255,255,255,0.06); }
+
+.btn-row { display:flex; gap:12px; align-items:center; }
+
+.icon-btn { background: transparent; border: none; padding: 6px; cursor: pointer; color: inherit; }
