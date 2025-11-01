@@ -1,60 +1,235 @@
-/* components.css — specific UI components */
-.menu-wrap { position: fixed; top: 20px; right: 20px; z-index: 60; }
-.menu-btn { display: inline-flex; align-items:center; justify-content:center; }
-.menu-dropdown { display: none; position: absolute; right: 0; top: 44px; min-width: 180px; }
-.card.small { padding: 8px; }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Farishanif Widyono — Fullstack Developer</title>
+  <meta name="description" content="Resume / portfolio of Muhammad Farishanif Widyono — Fullstack Developer. Projects, skills, contact and downloadable resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body class="light theme-blue">
+  <div class="container">
 
-.container {
- background: var(--accent);
- border: 1px solid rgba(255, 255, 255, 0.08);
-}
+    <!-- Top-right compact menu -->
+    <div class="menu-wrap">
+      <div class="menu-btn rounded glass shadow" id="menuBtn" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+        <button aria-label="Open menu" id="menuToggle" class="icon-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <circle cx="12" cy="5" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="19" r="1.5" fill="currentColor" />
+          </svg>
+        </button>
+        <div id="menuDropdown" class="menu-dropdown" aria-hidden="true">
+          <div class="card small">
+            <button id="openAppearance" class="btn-plain w-full">Appearance Settings</button>
+            <a href="#contact" class="btn-plain w-full">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-.imgcontainer {
- float: left;
-}
+    <!-- Hero (Neo-Tech Card) -->
+    <header class="section hero">
+      <div class="card hero-card">
+        <div class="hero-left">
+          <img src="./image/new pas foto 2.jpeg" alt="Profile" class="hero-avatar" />
+          <img src="./image/linkedin banner.png" alt="Banner" class="banner" />
+          <h1 class="hero-title">Muhammad Farishanif Widyono</h1>
+          <div class="hero-sub">Fullstack Developer — JavaScript • Node • React</div>
+          <p class="muted" style="margin-top:12px">Building scalable web solutions with clean, modern code.</p>
+          <div class="btn-row" style="margin-top:16px">
+            <a href="#contact" class="btn-primary">Contact Me</a>
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <div class="hero-left glass-card" style="margin-left: 400px;">
+          <div class="status">Open to work</div>
+          <div class="small">Remote • Freelance</div>
+        </div>
+          </div>
+        </div>
 
-.banner {
- width: 80%;
- height: auto;
- border-radius: 12px ;
-}
+        
+      </div>
+    </header>
 
-.hero { padding: 40px 0; }
-.hero-card { display: flex; justify-content: space-between; gap: 18px; align-items: center; border-radius: 14px; padding: 20px; 
- background: var(--bg-card); 
- border: 1px solid rgba(255, 255, 255, 0.12); 
- transition: background 0.3s ease, transform 0.3s ease;
-}
-.hero-avatar { width: 160px; height: 200px;  border-radius: 12px; object-fit: cover; }
-.hero-title { font-size: 32px; margin: 0; }
-.hero-sub { font-size: 14px; color: var(--muted); }
-.hero-left { float: left; }
-.hero-right { min-width: 140px; text-align: center; padding: 16px; border-radius: 12px; }
-.glass-card { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border-radius: 12px; padding: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); color: white; background: var(--accent); }
+    <main>
+      <section id="about" class="section card">
+        <h2>About</h2>
+        <p class="muted">Hi — I'm Farishanif, a fullstack developer focused on building performant web apps with clean architecture. I enjoy turning ideas into products and learning the right tool for the job.</p>
+      </section>
 
-.card {
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
+      <section id="skills" class="section card">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">JavaScript</span>
+          <span class="chip">React / Next.js</span>
+          <span class="chip">Node.js / Express</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">PostgreSQL / MongoDB</span>
+          <span class="chip">Testing</span>
+        </div>
+      </section>
 
-.chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
-.chip { padding:8px 10px; border-radius:10px; background: rgba(0,0,0,0.03); color: var(--fg); }
+      <section id="projects" class="section card">
+        <h2>Projects</h2>
+        <p>
+           Contributed to two distinct freelance projects, demonstrating versatility and quick adaptation on using 
+           third party implementation: 
+        </p>
+        <div class="grid projects-grid">
+          <article class="project">
+            <h3>Social Media Landing Page (2025)</h3>
+            <li class="muted">
+              Working on the projects in TypeScript programming language with the newest Next.js 
+              front-end frameworks, and React.Js back-end frameworks with MySQL database and 
+              PrismaORM for its scheme
+            </li>
+            <li class="muted">
+              Creating a scalable and flexible social media landing page that supports various improvements. 
+            </li>
+            <li class="muted">
+              Utilizing third party such as Clerk for automation user account management and also 
+              using Webhook for its event-driven communication. 
+            </li>
+          </article>
+          <article class="project">
+            <h3>TOP-UP STORE (2024)</h3>
+            <li class="muted">
+              Working on the projects in JavaScript programming language with Next.js front-end 
+              frameworks, and Express.Js back-end frameworks with MongoDB database. 
+            </li>
+            <li class="muted">
+              Creating a fluid and dynamic appearance for the website using TailwindCSS and AOS.
+            </li>
+            <li class="muted">
+              Implemented top up features and its management page and program. 
+            </li>
+            <li class="muted">
+              Connecting four third party API such as Clerk, Tripay, Digiflazz, and top up broker. 
+            </li>
+          </article>
+        </div>
+      </section>
 
-.projects-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; display: grid; margin-top:12px; }
-.project { padding:12px; border-radius:10px; }
+      <section id="experience" class="section card">
+        <h2>Experience</h2>
+        <div class="timeline">
 
-.timeline { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
-.job { padding:12px; border-radius:10px; }
+          <div class="job">
+            <strong>Fullstack Engineer</strong>
+            <div class="muted small">PT. Sofco Graha (July 2023 - Oktober 2023)</div>
+            <p>
+              I worked as a one “Tailor Made” Division Software Engineer team on creating and updating 
+              a company ERP Website template based on client request. Working with Agile methodology 
+              utilizing Kanban. My contributions included: 
+            </p>
+            <li class="muted"> 
+              Translating from Figma into functional code using JavaScript, and React JS. 
+            </li>
+            <li class="muted">
+              Working on the projects in Javascript programming language with Primefaces and 
+              Angular front-end frameworks, and React.Js back-end frameworks with MongoDB database.
+            </li>
+            <li class="muted">
+              Collaborated with team members to troubleshoot and resolve React coding issues. 
+            </li>
+            <li class="muted">
+              Create and modify the front-end and back-end menu for improving user experience and performances.
+            </li>
+            <li class="muted">
+              Responsible for improving some features, which are warehouse management 
+              programs and the company's fund allocation features.
+            </li>
+            <li class="muted">
+              Debugged software, identified root causes, and proposed solutions to software issues.
+            </li>
+            <div>Tech: React.js, Javascript, Primefaces, Angular, MongoDB, Kanban, ERP, Postman</div>
+          </div>
 
-.btn-primary { display:inline-block; padding:10px 14px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600; }
-.btn-ghost { display:inline-block; padding:10px 14px; border-radius:10px; background:transparent; border:1px solid var(--border); text-decoration:none; color:inherit; }
-.btn-plain { background: transparent; border: none; padding:8px; width:100%; text-align:left; cursor:pointer; }
+          <div class="job">
+            <strong>Software Engineer Intern</strong>
+            <div class="muted small">PT. DDB Telekomunikasi Indonesia (Agustus 2020 - Februari 2021)</div>
+            <p>
+              During my internship at DDB Telkom, I was actively involved as a Backend Engineer. 
+              Working with Agile methodology utilizing JIRA in the development of a two Courses 
+              Website that are interconnected. My contributions were: 
+            </p>
+            <li class="muted">
+              Creating and modify at least 24 back-end menus and API for improving user experience and performances. 
+            </li>
+            <li class="muted">
+              Working on two website project where each used Hapi and Restify Framework with 
+              PostgreSQL and MongoDB Databases
+            </li>
+            <li class="muted">
+              Managing the PostgreSQL and MongoDB database, including the creation and 
+              maintenance of collections for different project phases. 
+            </li>
+            <li class="muted">
+              Responsible for some features, namely scheduling accessibility and course expiration 
+              with Cron, improving web performance by implementing a queue system with 
+              RabbitMQ, optimizing caching performance with Redis, etc. 
+            </li>
+            <li class="muted">
+              Debugged software, identified root causes, and proposed solutions to software issues. 
+              While also creating unit testing with Mocha. 
+            </li>
+            <div>Tech:  JavaScipt, TypeScript, NodeJS, MongoDB, Hapi, Restify, PostgreSQL, Mocha, Postman.</div>
+          </div>
 
-.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.35); backdrop-filter: blur(4px); display: none; justify-content: center; align-items: center; z-index: 999; }
-.modal { background: rgba(255,255,255,0.6); backdrop-filter: blur(14px); padding: 18px; border-radius: 12px; max-width: 360px; width: 92%; border: 1px solid rgba(255,255,255,0.5); }
-body.dark .modal { background: rgba(20,20,35,0.55); border-color: rgba(255,255,255,0.08); }
+        </div>
+      </section>
 
-.form-row { margin-top:12px; }
-.radio-row { display:flex; gap:10px; margin-top:8px; }
-.form-actions { margin-top:16px; display:flex; justify-content:flex-end; gap:8px; }
+      <section id="contact" class="section card">
+        <h2>Contact</h2>
+        <p class="muted">Prefer email for job offers — <a href="mailto:farismfw@gmail.com"  target="_blank" rel="noopener">Mail Me</a>.</p>
+        <div style="margin-top:12px">
+          <p class="muted">You can also find my work on</p>
+          <div class="btn-row">
+            <a class="btn-primary" href="https://github.com/Farishanif target="_blank">View GitHub</a>
+            <a class="btn-primary" href="https://linkedin.com/in/muhammad-farishanif-widyono/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer muted">Made with ❤️ • Lightweight single-file resume for GitHub Pages</footer>
+
+    <!-- Modal backdrop -->
+    <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h3 id="modalTitle">Appearance Settings</h3>
+        <div class="form-row">
+          <div class="muted">Theme mode</div>
+          <div class="radio-row">
+            <label><input type="radio" name="themeMode" value="light"> Light</label>
+            <label><input type="radio" name="themeMode" value="dark"> Dark</label>
+            <label><input type="radio" name="themeMode" value="system"> System</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="muted">Accent</div>
+          <div class="radio-row">
+            <label><input type="radio" name="accent" value="blue"> Sky</label>
+            <label><input type="radio" name="accent" value="neon"> Neon</label>
+            <label><input type="radio" name="accent" value="gray"> Mild</label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button id="closeModal" class="btn-ghost">Close</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
