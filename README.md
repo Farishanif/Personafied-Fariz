@@ -1,6 +1,6 @@
  # My Own Resume Website
 
-A modern, animated, multi-theme resume website built with HTML, CSS, and JavaScript.  
+A modern, multi-theme resume website built with HTML, CSS, and JavaScript.  
 Designed to be hosted on GitHub Pages as a personal online resume/portfolio.
 
 ## ✨ Features
