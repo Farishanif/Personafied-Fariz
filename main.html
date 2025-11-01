@@ -3,109 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Muhammad Farishanif Widyono — Fullstack Developer</title>
+  <title>Muahmmad Farishanif Widyono — Fullstack Developer</title>
   <meta name="description" content="Resume / portfolio of Muhammad Farishanif Widyono — Fullstack Developer. Projects, skills, contact and downloadable resume." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f7f8fb;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#0066ff; 
-      --glass: rgba(255,255,255,0.6);
-      --radius:14px;
-      --shadow: 0 6px 20px rgba(15,23,42,0.08);
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 400px at 10% 5%, rgba(0,102,255,0.04), transparent), var(--bg);
-      color:#0f172a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:32px;
-    }
-
-    /* Layout */
-    .container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start}
-    @media (max-width:880px){
-      .container{grid-template-columns:1fr;padding:16px}
-    }
-
-    /* Sidebar */
-    .card{
-      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.96));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:22px;
-    }
-    .profile{
-      display:flex;gap:16px;align-items:center
-    }
-    .avatar{
-      width:86px;height:86px;border-radius:16px;flex:0 0 86px;background:linear-gradient(135deg,var(--accent),#00a3ff);display:grid;place-items:center;color:white;font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(0,0,0,0.08)
-    }
-    h1{font-size:20px;margin:0}
-    .muted{color:var(--muted);font-size:13px}
-
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .skill{background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));padding:8px 10px;border-radius:10px;font-size:13px}
-
-    .contact{margin-top:18px;display:flex;flex-direction:column;gap:8px}
-    .contact a{display:inline-flex;gap:10px;align-items:center;text-decoration:none;color:var(--muted);font-size:14px}
-
-    .download{
-      margin-top:16px;display:inline-block;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#00a3ff);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(0,102,255,0.14)
-    }
-
-    /* Main */
-    .main{
-      display:flex;flex-direction:column;gap:18px
-    }
-    .hero{
-      display:flex;justify-content:space-between;align-items:center;gap:12px
-    }
-    .tagline{font-size:15px;color:var(--muted)}
-
-    .section{background:linear-gradient(180deg,var(--glass), rgba(255,255,255,0.85));padding:18px;border-radius:12px;border:1px solid rgba(15,23,42,0.03)}
-    .section h2{margin:0;font-size:16px}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-    @media (max-width:700px){.projects{grid-template-columns:1fr}}
-    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff, #fbfdff);box-shadow:0 6px 18px rgba(12,20,40,0.04);border:1px solid rgba(2,6,23,0.03)}
-    .project h3{margin:0;font-size:14px}
-    .project p{margin:8px 0 0 0;color:var(--muted);font-size:13px}
-
-    .timeline{display:flex;flex-direction:column;gap:12px;margin-top:12px}
-    .job{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(10,20,40,0.03)}
-    .meta{font-size:13px;color:var(--muted)}
-
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{background:rgba(0,0,0,0.04);padding:8px 10px;border-radius:999px;font-size:13px}
-
-    /* Footer */
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* Utilities */
-    .actions{display:flex;gap:10px;align-items:center}
-    .ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:8px 10px;border-radius:10px}
-
-    /* small flourish */
-    .accent-line{height:4px;background:linear-gradient(90deg,var(--accent),#00a3ff);border-radius:8px;margin-top:18px}
-
-    /* Dark mode */
-    .dark{--bg:#071028;--card:linear-gradient(180deg, rgba(20,28,40,0.8), rgba(10,14,22,0.8));--muted:#98a0b3;--glass:rgba(255,255,255,0.03);color-scheme:dark;color:#e6eef8}
-    .dark body{background: #071028}
-
-    /* small animations */
-    .fadein{animation:fadeIn .7s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  </style>
+  <link rel="stylesheet" href="Neo-Tech-style.css" />
 </head>
 <body>
   <div class="container fadein" id="page">
@@ -113,7 +16,7 @@
       <div class="profile">
         <div class="avatar">FZ</div>
         <div>
-          <h1>Muhammad Farishanif Widyono</h1>
+          <h1>Fariz</h1>
           <div class="muted">Fullstack Developer — JavaScript • Node • React</div>
           <div class="tagline" style="margin-top:8px">Building clean, scalable web apps and delightful UX.</div>
         </div>
@@ -129,14 +32,14 @@
           <div class="skill">Node.js / Express</div>
           <div class="skill">TypeScript</div>
           <div class="skill">Postgres / MongoDB</div>
-          <div class="skill">Testing (Jest)</div>
+          <div class="skill">Testing</div>
         </div>
       </div>
 
       <div class="contact">
         <a href="mailto:farismfw@gmail.com">✉️ farismfw@gmail.com</a>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener">💻 github.com/Farishanif</a>
-        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">🔗 linkedin.com/in/muhammad-farishanif-widyono/</a>
+        <a href="https://github.com/Farishanif" target="_blank" rel="noopener">💻 github.com/Farishanif</a>
+        <a href="https://linkedin.com/in/muhammad-farishanif-widyono/" target="_blank" rel="noopener">🔗 linkedin.com/in/muhammad-farishanif-widyono/</a>
       </div>
 
       <a class="download" href="#" id="downloadBtn">Download PDF</a>
@@ -157,16 +60,7 @@
       <div class="card section hero">
         <div>
           <h2 style="margin-bottom:6px">About — <span style="color:var(--muted);font-weight:600">Quick intro</span></h2>
-          <p class="muted" style="margin-top:8px">
-            Hi — I'm Faris, a Backend-focused and result-driven software developer with more or less two years of 
-            experience in TypeScript and Javascript Frameworks. Proficient in multiple programming 
-            languages including Java, Python, and Javascript, with a strong foundation in algorithm, 
-            data structure, and software design principles. Experienced in web development, ML 
-            Engineering and IoT Engineering, with a foundational understanding of CI/CD practices, and 
-            clean code principles. Adept at collaborating in agile teams, troubleshooting complex issues, 
-            and delivering high-quality, user-centric solutions. Committed to continuing learning and 
-            staying updated with emerging technologies. .
-          </p>
+          <p class="muted" style="margin-top:8px">Hi — I'm Farishanif, a fullstack developer focused on building performant web apps with clean architecture. I enjoy turning ideas into products and learning the right tool for the job.</p>
 
           <div style="margin-top:12px" class="chips">
             <div class="chip">Open to work</div>
@@ -184,9 +78,9 @@
       <div class="card section">
         <h2>Projects</h2>
         <p>
-              Contributed to two distinct freelance projects, demonstrating versatility and quick adaptation on using 
-              third party implementation: 
-            </p>
+            Contributed to two distinct freelance projects, demonstrating versatility and quick adaptation on using 
+            third party implementation: 
+          </p>
         <div class="projects">
           <article class="project">
             <h3>Social Media Landing Page (2024)</h3>
@@ -227,7 +121,7 @@
         <h2>Experience & Education</h2>
         <div class="timeline">
           
-          <div class="job">
+         <div class="job">
             <div style="display:flex;justify-content:space-between;align-items:flex-start">
               <div>
                 <strong>Fullstack Engineer</strong>
@@ -292,17 +186,17 @@
             </li>
             <div style="margin-top:10px" class="muted">Tech:  JavaScipt, TypeScript, NodeJS, MongoDB, Hapi, Restify, PostgreSQL, Mocha, Postman.</div>
           </div>
-      
+          
         </div>
       </div>
 
       <div class="card section">
         <h2 id="contact">Contact</h2>
-        <p class="muted">Prefer email for job offers — <a href="mailto:farismfw@gmail.com">farismfw@gmail.com</a>. You can also find my work on <a href="https://github.com/Farishanif" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p class="muted">Prefer email for job offers — <a href="mailto:farismfw@gmail.com">farismfw@gmail.com</a>. You can also find my work on <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>.</p>
 
         <div style="margin-top:12px;display:flex;gap:10px">
           <a class="ghost" href="https://github.com/Farishanif" target="_blank">View GitHub</a>
-          <a class="ghost" href="https://linkedin.com/in/muhammad-farishanif-widyono" target="_blank">LinkedIn</a>
+          <a class="ghost" href="https://linkedin.com/in/muhammad-farishanif-widyono/" target="_blank">LinkedIn</a>
         </div>
       </div>
 
