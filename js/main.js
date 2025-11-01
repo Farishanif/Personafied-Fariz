@@ -36,7 +36,7 @@
   const accentRadios = document.querySelectorAll('input[name="accent"]');
 
   function applyAccent(name){
-    root.classList.remove('theme-blue','theme-cyber','theme-gray');
+    root.classList.remove('theme-blue','theme-neon','theme-gray');
     root.classList.add('theme-' + name);
     localStorage.setItem('accent', name);
   }
