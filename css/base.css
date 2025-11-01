@@ -6,11 +6,11 @@
   --bg: #f7f8fb;
   --fg: #0f172a;
   --muted: #6b7280;
-  --card: #ffffff;
+  --bg-card: #e9ecf1;        /* slightly darker than bg */
   --border: rgba(15, 23, 42, 0.06);
-  --accent: #0066ff;
-  --accent-2: #3b82f6;
-  --accent-3: #60a5fa;
+  --text: #111;
+  --accent: #3b82f6;
+  --accent-dark: #2a5fba;   /* darker shade of accent */
   --shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
 }
 
@@ -24,9 +24,34 @@ body.dark, body.theme-dark, .dark {
   --shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-/* Accent themes (class-based) */
+/* Blue Theme */
+body.theme-blue {
+  --bg: #e8f1ff;
+  --bg-card: #d4e4ff;
+  --text: #0c1a2b;
+  --accent: #2a5fba;
+  --accent-dark: #3b82f6;
+}
+
+/* Cyberpunk Theme */
+body.theme-cyber {
+  --bg: #0a0f1f;
+  --bg-card: #0d132a;
+  --text: #d7e9ff;
+  --accent: #8a2eff;
+  --accent-dark: #fd8cff;
+}
+
+/* Minimal Gray Theme */
+body.theme-gray {
+  --bg: #f1f1f1;
+  --bg-card: #dbdbdb;
+  --text: #222;
+  --accent: #4b5563;
+  --accent-dark: #6b7280;
+}
 body.theme-blue { --accent: #0066ff; --accent-2: #3b82f6; --accent-3: #60a5fa; }
-body.theme-cyber { --accent: #00eaff; --accent-2: #ff00f5; --accent-3: #8a2eff; }
+body.theme-neon { --accent: #fd8cff; --accent-2: #ff00f5; --accent-3: #8a2eff; }
 body.theme-gray { --accent: #6b7280; --accent-2: #9ca3af; --accent-3: #d1d5db; }
 
 /* Base reset */
