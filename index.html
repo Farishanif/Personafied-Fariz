@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="css/utilities.css" />
   <link rel="stylesheet" href="css/components.css" />
 </head>
-<body class="light theme-blue">
-  <div class="container">
+<body class="light theme-blue bg-img">
+  <div class="container container-glass">
 
     <!-- Top-right compact menu -->
     <div class="menu-wrap">
@@ -36,10 +36,10 @@
 
     <!-- Hero (Neo-Tech Card) -->
     <header class="section hero">
-      <div class="card hero-card">
+      <div class="card hero-card" data-aos="fade-up" data-aos-duration="700">
         <div class="hero-left">
-          <img src="./image/new pas foto 2.jpeg" alt="Profile" class="hero-avatar" />
-          <img src="./image/linkedin banner.png" alt="Banner" class="banner" />
+          <img src="./images/new pas foto 2.jpeg" alt="Profile" class="hero-avatar" />
+          <img src="./images/linkedin banner.png" alt="Banner" class="banner" />
           <h1 class="hero-title">Muhammad Farishanif Widyono</h1>
           <div class="hero-sub">Fullstack Developer — JavaScript • Node • React</div>
           <p class="muted" style="margin-top:12px">Building scalable web solutions with clean, modern code.</p>
@@ -82,7 +82,7 @@
            third party implementation: 
         </p>
         <div class="grid projects-grid">
-          <article class="project">
+          <article class="project" data-aos="zoom-in" data-aos-delay="150">
             <h3>Social Media Landing Page (2025)</h3>
             <li class="muted">
               Working on the projects in TypeScript programming language with the newest Next.js 
@@ -97,7 +97,7 @@
               using Webhook for its event-driven communication. 
             </li>
           </article>
-          <article class="project">
+          <article class="project" data-aos="zoom-in" data-aos-delay="150">
             <h3>TOP-UP STORE (2024)</h3>
             <li class="muted">
               Working on the projects in JavaScript programming language with Next.js front-end 
@@ -118,9 +118,9 @@
 
       <section id="experience" class="section card">
         <h2>Experience</h2>
-        <div class="timeline">
+        <div class="timeline" data-aos-stagger="160">
 
-          <div class="job">
+          <div class="job" data-aos="fade-up">
             <strong>Fullstack Engineer</strong>
             <div class="muted small">PT. Sofco Graha (July 2023 - Oktober 2023)</div>
             <p>
@@ -151,7 +151,7 @@
             <div>Tech: React.js, Javascript, Primefaces, Angular, MongoDB, Kanban, ERP, Postman</div>
           </div>
 
-          <div class="job">
+          <div class="job" data-aos="fade-up">
             <strong>Software Engineer Intern</strong>
             <div class="muted small">PT. DDB Telekomunikasi Indonesia (Agustus 2020 - Februari 2021)</div>
             <p>
@@ -205,7 +205,7 @@
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <h3 id="modalTitle">Appearance Settings</h3>
         <div class="form-row">
-          <div class="muted">Theme mode</div>
+          <div>Theme mode</div>
           <div class="radio-row">
             <label><input type="radio" name="themeMode" value="light"> Light</label>
             <label><input type="radio" name="themeMode" value="dark"> Dark</label>
@@ -214,7 +214,7 @@
         </div>
 
         <div class="form-row">
-          <div class="muted">Accent</div>
+          <div>Accent</div>
           <div class="radio-row">
             <label><input type="radio" name="accent" value="blue"> Sky</label>
             <label><input type="radio" name="accent" value="neon"> Neon</label>
