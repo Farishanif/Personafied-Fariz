@@ -55,6 +55,86 @@
     }
   }
 
+  /* ===== AOS-Like Scroll Animations (Repeat + Reverse Based on Scroll Direction) ===== */
+  (function(){
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('[data-aos]').forEach(el => el.classList.add('aos-animate'));
+      return;
+    }
+
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      document.querySelectorAll('[data-aos]').forEach(el => el.classList.add('aos-animate'));
+      return;
+    }
+
+    let lastScrollY = window.scrollY;
+
+    const observer = new IntersectionObserver((entries) => {
+      const scrollingDown = window.scrollY > lastScrollY;
+      lastScrollY = window.scrollY;
+
+      entries.forEach(entry => {
+        const el = entry.target;
+
+        const delay = parseInt(el.getAttribute('data-aos-delay') || '0', 10);
+        const duration = parseInt(el.getAttribute('data-aos-duration') || '500', 10);
+
+        el.style.transitionDuration = duration + 'ms';
+        el.style.transitionDelay = delay + 'ms';
+
+        // Entering viewport
+        if (entry.isIntersecting) {
+          // Apply reverse class if scrolling up
+          if (!scrollingDown) {
+            el.classList.add('aos-reverse');
+          } else {
+            el.classList.remove('aos-reverse');
+          }
+          el.classList.add('aos-animate');
+        } 
+        // Leaving viewport
+        else {
+          // Reverse leave animation based on direction
+          if (scrollingDown) {
+            el.classList.add('aos-reverse');
+          } else {
+            el.classList.remove('aos-reverse');
+          }
+
+          el.classList.remove('aos-animate');
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -8% 0px',
+      threshold: 0.18
+    });
+
+    document.querySelectorAll('[data-aos]').forEach(el => {
+      el.style.willChange = 'opacity, transform';
+      observer.observe(el);
+    });
+
+  })();
+
+  /* ===== Auto-Stagger Support ===== */
+  (function(){
+    const parents = document.querySelectorAll('[data-aos-stagger]');
+    if (!parents.length) return;
+
+    parents.forEach(parent => {
+      const baseDelay = parseInt(parent.getAttribute('data-aos-stagger') || '120', 10);
+      let delay = 0;
+
+      const children = parent.querySelectorAll('[data-aos]');
+      children.forEach(child => {
+        child.setAttribute('data-aos-delay', delay);
+        delay += baseDelay;
+      });
+    });
+  })();
+
+
   // Load saved preferences
   const savedAccent = localStorage.getItem('accent') || 'blue';
   applyAccent(savedAccent);
