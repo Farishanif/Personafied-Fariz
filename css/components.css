@@ -34,7 +34,7 @@
  transition: background 0.3s ease, transform 0.3s ease;
 }
 .hero-avatar { width: 160px; height: 200px;  border-radius: 12px; object-fit: cover; }
-.hero-title { font-size: 32px; margin: 0; }
+.hero-title { font-size: 32px; margin: 0; color: var(--text); }
 .hero-sub { font-size: 14px; color: var(--muted); }
 .hero-left { float: left; }
 .hero-right { min-width: 140px; text-align: center; padding: 16px; border-radius: 12px; }

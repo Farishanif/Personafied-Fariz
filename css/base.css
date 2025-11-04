@@ -5,30 +5,27 @@
   --font-main: "JetBrains Mono", monospace;
 
   /* Light theme */
+  --text: #000000;
   --bg: #c1c8d0;
-  /* --fg: #242832; */
-  --muted: #2d2f34;
   --bg-card: #e9ecf1;        /* slightly darker than bg */
   --border: rgba(15, 23, 42, 0.06);
-  --text: #111;
   --shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
 }
 
 /* Dark modes */
 body.dark {
+  --text: #ffffff;
   --bg: #242832;
-  --muted: #bfc7cf;
   --bg-card: #37404d;
   --border: rgba(255,255,255,0.06);
-  --text: #ffffff;
   --shadow: 0 0 0 rgba(0,0,0,0);
 }
 
 /* Blue Theme */
 body.theme-blue {
-  --bg: #2c5981;
+  --bg: #8bbae3;
   --bg-card: #749bdf;
-  --text: #0c1a2b;
+  --muted: #27455c;
   --accent: #2a5fba;
   --accent-dark: #3b82f6;
   --glass-bg: rgba(61, 165, 255, 0.09);
@@ -45,6 +42,7 @@ body.theme-blue {
 /* Blue + Dark Mode */
 body.theme-blue.dark {
   --bg-card: #4b6ca4;
+  --muted:#cddef3;
   --glass-bg: rgba(82, 146, 218, 0.14);
   --glass-border: rgba(135, 206, 255, 0.17);
   --glass-shadow:
@@ -56,9 +54,9 @@ body.theme-blue.dark {
 
 /* Cyberpunk Theme */
 body.theme-neon {
-  --bg: #622d62;
+  --bg: #e8bbe8;
   --bg-card: #ad59d1;
-  --text: #353d46;
+  --muted: #443546;
   --accent: #a162f4;
   --accent-dark: #fd8cff;
   --glass-bg: rgba(0, 255, 255, 0.07);
@@ -75,6 +73,7 @@ body.theme-neon {
 /* Neon + Dark Mode */
 body.theme-neon.dark {
   --bg-card: #b941bdc3;
+  --muted: #f1d8f5;
   --glass-bg: rgba(222, 71, 197, 0.521);
   --glass-border: rgba(251, 135, 255, 0.17);
   --glass-shadow:
@@ -86,9 +85,9 @@ body.theme-neon.dark {
 
 /* Minimal Gray Theme */
 body.theme-gray {
-  --bg: #584242;
-  --bg-card: #807f7f;
-  --text: #222;
+  --bg: #ae9898;
+  --bg-card: #806e6e;
+  --muted: #222;
   --accent: #4b5563;
   --accent-dark: #6b7280;
   --glass-bg: rgba(255, 255, 255, 0.25);
@@ -105,6 +104,7 @@ body.theme-gray {
 /* Gray + Dark Mode */
 body.theme-gray.dark {
   --bg-card: #a57f7193;
+  --muted: #e8e2e2;
   --glass-bg: rgba(101, 84, 80, 0.586);
   --glass-border: rgba(255, 151, 135, 0.17);
   --glass-shadow:
@@ -114,13 +114,11 @@ body.theme-gray.dark {
   --bg-img-opacity: 0.38;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  color: var(--text) !important;
-}
-
 /* Base reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
+
+/* Body + Theme Base */
 body {
   font-family: var(--font-main);
   background-color: var(--bg);
@@ -128,18 +126,13 @@ body {
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 28px;
-}
 
-/* Root Background Wrapper */
-body {
+  padding: 28px;
   position: relative;
-  background-color: var(--bg); /* Keeps your theme color visible */
-  content: "text=" attr(style);
   overflow-x: hidden;
 }
 
-/* Background image layer */
+/* Background Image Layer */
 body::before {
   content: "";
   position: fixed;
@@ -148,14 +141,11 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* Adjust transparency of image over theme color */
   opacity: var(--bg-img-opacity, 0.45);
-
-  z-index: -2; /* stays behind everything */
+  z-index: -2;
 }
 
-/* Optional subtle overlay to blend theme + image */
+/* Color Overlay (Theme Blend) */
 body::after {
   content: "";
   position: fixed;
@@ -164,6 +154,7 @@ body::after {
   z-index: -1;
   pointer-events: none;
 }
+
 
 /* layout */
 .container { max-width: 1000px; margin: 0 auto; position: relative; }
