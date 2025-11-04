@@ -50,10 +50,10 @@
 .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
 .chip { padding:8px 10px; border-radius:10px; background: rgba(0,0,0,0.03); color: var(--text); }
 
-.projects-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; display: grid; margin-top:12px; }
-.publications-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; display: grid; margin-top:12px; }
+.projects-grid, .publications-grid, .awards-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; display: grid; margin-top:12px; }
 .project { padding:12px; border-radius:10px; }
-.publications { padding:12px; border-radius:10px; padding-bottom: 10px; }
+.publication { padding:12px; border-radius:10px; padding-bottom: 10px; }
+.award { padding:12px; border-radius:10px; }
 
 .timeline { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
 .job { padding:12px; border-radius:10px;}
