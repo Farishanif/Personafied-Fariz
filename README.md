@@ -5,8 +5,7 @@ Designed to be hosted on GitHub Pages as a personal online resume/portfolio.
 
 ## ✨ Features
 
-- ✅ Mobile-friendly responsive layout  
-- 🎨 Theme switcher (Default, Blue, Cyberpunk, Minimal Gray)  
+- 🎨 Theme switcher (Sky Blue, Neon, Mild)  
 - 🪟 Glassmorphism elements  
 - ⚡ Lightweight & fast (no external frameworks)  
 - 🎯 Recruiter-friendly sections  
