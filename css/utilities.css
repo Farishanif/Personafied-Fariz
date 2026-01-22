@@ -1,8 +1,14 @@
 /* utilities.css — light utility set */
 .flex { display: flex; }
-.grid { display: grid; }
+.grid { display: grid; max-width: 100%; }
+    
 .flex-center { display:flex; align-items:center; justify-content:center; }
 .container { padding: 0 18px; }
+
+.space-t-1 { margin-top: 4px; }
+.space-t-2 { margin-top: 8px; }
+.space-b-1 { margin-bottom: 4px; }
+.space-b-2 { margin-bottom: 8px; }
 
 .p-1 { padding: 8px; }
 .p-2 { padding: 12px; }

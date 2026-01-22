@@ -21,12 +21,6 @@
  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
  }
 
-.banner {
- width: 80%;
- height: auto;
- border-radius: 12px ;
-}
-
 .hero { padding: 40px 0; }
 .hero-card { display: flex; justify-content: space-between; gap: 18px; align-items: center; border-radius: 14px; padding: 20px; 
  background: var(--bg-card); 
@@ -38,6 +32,22 @@
 .hero-sub { font-size: 14px; color: var(--muted); }
 .hero-left { float: left; }
 .hero-right { min-width: 140px; text-align: center; padding: 16px; border-radius: 12px; }
+
+.hero-banner {
+ width: 80%;
+ height: auto;
+ border-radius: 12px ;
+}
+.banner {
+ width: 80%;
+ height: 40%;
+ display: block; 
+ margin-left: auto; 
+ margin-right: auto;
+ border-radius: 12px ;
+}
+
+
 .glass-card { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border-radius: 12px; padding: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); color: white; background: var(--accent); }
 
 .card {
@@ -50,10 +60,10 @@
 .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
 .chip { padding:8px 10px; border-radius:10px; background: rgba(0,0,0,0.03); color: var(--text); }
 
-.projects-grid, .publications-grid, .awards-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; display: grid; margin-top:12px; }
-.project { padding:12px; border-radius:10px; }
-.publication { padding:12px; border-radius:10px; padding-bottom: 10px; }
-.award { padding:12px; border-radius:10px; }
+.projects-grid, .publications-grid, .awards-grid { 
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
+  display: grid; margin-top:12px; gap: 5px; align-content: start;}
+.project, .publication, .award { padding:12px; border-radius:10px; max-width: 100%; height: auto}
 
 .timeline { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
 .job { padding:12px; border-radius:10px;}
