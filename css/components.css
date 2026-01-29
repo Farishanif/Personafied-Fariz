@@ -68,7 +68,7 @@
 .timeline { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
 .job { padding:12px; border-radius:10px;}
 
-.btn-primary { display:inline-block; padding:10px 14px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600; }
+.btn-primary { display:inline-block; padding:10px 14px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600;}
 .btn-ghost { display:inline-block; padding:10px 14px; border-radius:10px; background:transparent; border:1px solid var(--border); text-decoration:none; color:inherit; }
 .btn-plain { background: transparent; border: none; padding:8px; width:100%; text-align:left; cursor:pointer; }
 

@@ -162,7 +162,7 @@ body::after {
 
 /* small components */
 .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
-.section { margin: 18px 0; }
+.section { margin: 18px 0; flex-wrap: wrap;}
 .muted { color: var(--muted); }
 .small { font-size: 13px; }
 .footer { text-align: center; margin: 40px 0; color: var(--muted); }
